@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="title_activity_help">HelpActivity</string>
+
+
+    <string name="help_num_title">数字(Number)</string>
+
+</resources>

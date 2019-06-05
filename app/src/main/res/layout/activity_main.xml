@@ -1,0 +1,957 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="3.0">
+            <EditText
+                android:textSize="20.0sp"
+                android:typeface="monospace"
+                android:gravity="start|center|top"
+                android:id="@+id/inputBox"
+                android:background="@null"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="10.0dip"
+                android:inputType="textMultiLine"
+
+                android:fontFamily="monospace" />
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/ansLayout"
+            android:background="#20000000"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="2.0">
+            <ScrollView
+                android:id="@+id/ansView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+                <TextView
+                    android:textSize="18.0sp"
+                    android:typeface="monospace"
+                    android:textColor="@android:color/darker_gray"
+                    android:id="@+id/ansBox"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10.0dip"
+                    android:fontFamily="monospace" />
+            </ScrollView>
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/keyboardLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="4.0">
+            <com.example.jfy.myapplication.KeyboardFlipper
+                android:id="@+id/keyboardFlipper"
+                android:background="#40000000"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+
+                >
+
+                <LinearLayout
+                    android:id="@+id/keyboardPage1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal">
+
+                    <com.example.jfy.myapplication.SlowScrollView
+                        android:id="@+id/keyboard_number_scroll"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.0"
+                        android:scrollbars="none">
+
+                        <FrameLayout
+                            android:id="@+id/keyboard_number_frame"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+
+                            <TableLayout
+                                android:id="@+id/keyboard_number"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content">
+
+                                <TableRow
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="0.0dip"
+                                    android:layout_weight="1.0">
+
+                                    <Button
+                                        android:id="@+id/button_7"
+                                        style="@style/Widget.AppCompat.Button.Borderless"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:layout_weight="1.0"
+                                        android:fontFamily="monospace"
+                                        android:text="7"
+                                        android:textAllCaps="false"
+                                        android:textSize="18.0sp" />
+
+                                    <Button
+                                        android:id="@+id/button_8"
+                                        style="@style/Widget.AppCompat.Button.Borderless"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:layout_weight="1.0"
+                                        android:fontFamily="monospace"
+                                        android:text="8"
+                                        android:textAllCaps="false"
+                                        android:textSize="18.0sp" />
+
+                                    <Button
+                                        android:id="@+id/button_9"
+                                        style="@style/Widget.AppCompat.Button.Borderless"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:layout_weight="1.0"
+                                        android:fontFamily="monospace"
+                                        android:text="9"
+                                        android:textAllCaps="false"
+                                        android:textSize="18.0sp" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="0.0dip"
+                                    android:layout_weight="1.0">
+
+                                    <Button
+                                        android:id="@+id/button_4"
+                                        style="@style/Widget.AppCompat.Button.Borderless"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:layout_weight="1.0"
+                                        android:fontFamily="monospace"
+                                        android:text="4"
+                                        android:textAllCaps="false"
+                                        android:textSize="18.0sp" />
+
+                                    <Button
+                                        android:id="@+id/button_5"
+                                        style="@style/Widget.AppCompat.Button.Borderless"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:layout_weight="1.0"
+                                        android:fontFamily="monospace"
+                                        android:text="5"
+                                        android:textAllCaps="false"
+                                        android:textSize="18.0sp" />
+
+                                    <Button
+                                        android:id="@+id/button_6"
+                                        style="@style/Widget.AppCompat.Button.Borderless"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:layout_weight="1.0"
+                                        android:fontFamily="monospace"
+                                        android:text="6"
+                                        android:textAllCaps="false"
+                                        android:textSize="18.0sp" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="0.0dip"
+                                    android:layout_weight="1.0">
+
+                                    <Button
+                                        android:id="@+id/button_1"
+                                        style="@style/Widget.AppCompat.Button.Borderless"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:layout_weight="1.0"
+                                        android:fontFamily="monospace"
+                                        android:text="1"
+                                        android:textAllCaps="false"
+                                        android:textSize="18.0sp" />
+
+                                    <Button
+                                        android:id="@+id/button_2"
+                                        style="@style/Widget.AppCompat.Button.Borderless"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:layout_weight="1.0"
+                                        android:fontFamily="monospace"
+                                        android:text="2"
+                                        android:textAllCaps="false"
+                                        android:textSize="18.0sp" />
+
+                                    <Button
+                                        android:id="@+id/button_3"
+                                        style="@style/Widget.AppCompat.Button.Borderless"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:layout_weight="1.0"
+                                        android:fontFamily="monospace"
+                                        android:text="3"
+                                        android:textAllCaps="false"
+                                        android:textSize="18.0sp" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="0.0dip"
+                                    android:layout_weight="1.0">
+
+                                    <Button
+                                        android:id="@+id/button_bra"
+                                        style="@style/Widget.AppCompat.Button.Borderless"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:layout_weight="1.0"
+                                        android:fontFamily="monospace"
+                                        android:text="( )"
+                                        android:textAllCaps="false"
+                                        android:textSize="18.0sp" />
+
+                                    <Button
+                                        android:id="@+id/button_0"
+                                        style="@style/Widget.AppCompat.Button.Borderless"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:layout_weight="1.0"
+                                        android:fontFamily="monospace"
+                                        android:text="0"
+                                        android:textAllCaps="false"
+                                        android:textSize="18.0sp" />
+
+                                    <Button
+                                        android:id="@+id/button_dot"
+                                        style="@style/Widget.AppCompat.Button.Borderless"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:layout_weight="1.0"
+                                        android:fontFamily="monospace"
+                                        android:text="."
+                                        android:textAllCaps="false"
+                                        android:textSize="18.0sp" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="0.0dip"
+                                    android:layout_weight="1.0">
+
+                                    <Button
+                                        android:id="@+id/button_hexD"
+                                        style="@style/Widget.AppCompat.Button.Borderless"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:layout_weight="1.0"
+                                        android:fontFamily="monospace"
+                                        android:text="D"
+                                        android:textAllCaps="false"
+                                        android:textSize="18.0sp" />
+
+                                    <Button
+                                        android:id="@+id/button_hexE"
+                                        style="@style/Widget.AppCompat.Button.Borderless"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:layout_weight="1.0"
+                                        android:fontFamily="monospace"
+                                        android:text="E"
+                                        android:textAllCaps="false"
+                                        android:textSize="18.0sp" />
+
+                                    <Button
+                                        android:id="@+id/button_hexF"
+                                        style="@style/Widget.AppCompat.Button.Borderless"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:layout_weight="1.0"
+                                        android:fontFamily="monospace"
+                                        android:text="F"
+                                        android:textAllCaps="false"
+                                        android:textSize="18.0sp" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="0.0dip"
+                                    android:layout_weight="1.0">
+
+                                    <Button
+                                        android:id="@+id/button_hexA"
+                                        style="@style/Widget.AppCompat.Button.Borderless"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:layout_weight="1.0"
+                                        android:fontFamily="monospace"
+                                        android:text="A"
+                                        android:textAllCaps="false"
+                                        android:textSize="18.0sp" />
+
+                                    <Button
+                                        android:id="@+id/button_hexB"
+                                        style="@style/Widget.AppCompat.Button.Borderless"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:layout_weight="1.0"
+                                        android:fontFamily="monospace"
+                                        android:text="B"
+                                        android:textAllCaps="false"
+                                        android:textSize="18.0sp" />
+
+                                    <Button
+                                        android:id="@+id/button_hexC"
+                                        style="@style/Widget.AppCompat.Button.Borderless"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:layout_weight="1.0"
+                                        android:fontFamily="monospace"
+                                        android:text="C"
+                                        android:textAllCaps="false"
+                                        android:textSize="18.0sp" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="0.0dip"
+                                    android:layout_weight="1.0">
+
+                                    <Button
+                                        android:id="@+id/button_bin"
+                                        style="@style/Widget.AppCompat.Button.Borderless"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:layout_weight="1.0"
+                                        android:fontFamily="monospace"
+                                        android:text="Bin"
+                                        android:textAllCaps="false"
+                                        android:textSize="18.0sp" />
+
+                                    <Button
+                                        android:id="@+id/button_oct"
+                                        style="@style/Widget.AppCompat.Button.Borderless"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:layout_weight="1.0"
+                                        android:fontFamily="monospace"
+                                        android:text="Oct"
+                                        android:textAllCaps="false"
+                                        android:textSize="18.0sp" />
+
+                                    <Button
+                                        android:id="@+id/button_hex"
+                                        style="@style/Widget.AppCompat.Button.Borderless"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:layout_weight="1.0"
+                                        android:fontFamily="monospace"
+                                        android:text="Hex"
+                                        android:textAllCaps="false"
+                                        android:textSize="18.0sp" />
+                                </TableRow>
+                            </TableLayout>
+                        </FrameLayout>
+                    </com.example.jfy.myapplication.SlowScrollView>
+
+                    <TableLayout
+                        android:id="@+id/keyboard1"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="2.0">
+
+                        <TableRow
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0">
+
+                            <Button
+                                android:id="@+id/button_div"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1.0"
+                                android:fontFamily="monospace"
+                                android:text="/"
+                                android:textAllCaps="false"
+                                android:textSize="18.0sp" />
+
+                            <Button
+                                android:id="@+id/button_bs"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1.0"
+                                android:fontFamily="monospace"
+                                android:text="&lt;&lt;"
+                                android:textAllCaps="false"
+                                android:textSize="18.0sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0">
+
+                            <Button
+                                android:id="@+id/button_mul"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1.0"
+                                android:fontFamily="monospace"
+                                android:text="*"
+                                android:textAllCaps="false"
+                                android:textSize="18.0sp" />
+
+                            <Button
+                                android:id="@+id/button_pow"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1.0"
+                                android:fontFamily="monospace"
+                                android:text="^"
+                                android:textAllCaps="false"
+                                android:textSize="18.0sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0">
+
+                            <Button
+                                android:id="@+id/button_sub"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1.0"
+                                android:fontFamily="monospace"
+                                android:text="-"
+                                android:textAllCaps="false"
+                                android:textSize="18.0sp" />
+
+                            <Button
+                                android:id="@+id/button_sqrt"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1.0"
+                                android:fontFamily="monospace"
+                                android:text="√"
+                                android:textAllCaps="false"
+                                android:textSize="18.0sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0">
+
+                            <Button
+                                android:id="@+id/button_add"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1.0"
+                                android:fontFamily="monospace"
+                                android:text="+"
+                                android:textAllCaps="false"
+                                android:textSize="18.0sp" />
+
+                            <Button
+                                android:id="@+id/button_eq"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1.0"
+                                android:fontFamily="monospace"
+                                android:text="="
+                                android:textAllCaps="false"
+                                android:textSize="18.0sp" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+                <TableLayout
+                    android:id="@+id/keyboardPage2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0">
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0">
+                        <Button
+                            android:textSize="18.0sp"
+                            android:id="@+id/button_e"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="e"
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                        <Button
+                            android:textSize="18.0sp"
+                            android:id="@+id/button_pi"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="π"
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                        <Button
+                            android:textSize="18.0sp"
+                            android:id="@+id/button_i"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="i"
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                        <Button
+                            android:textSize="18.0sp"
+                            android:id="@+id/button_inf"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="∞"
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                        <Button
+                            android:textSize="18.0sp"
+                            android:id="@+id/button_bs2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="&lt;&lt;"
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0">
+                        <Button
+                            android:textSize="18.0sp"
+                            android:id="@+id/button_exp"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="Exp"
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                        <Button
+                            android:textSize="18.0sp"
+                            android:id="@+id/button_ln"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="Ln"
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                        <Button
+                            android:textSize="18.0sp"
+                            android:id="@+id/button_deg"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="°"
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                        <Button
+                            android:textSize="18.0sp"
+                            android:id="@+id/button_norm"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="Norm"
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                        <Button
+                            android:textSize="18.0sp"
+                            android:id="@+id/button_arg"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="Arg"
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0">
+                        <Button
+                            android:textSize="18.0sp"
+                            android:id="@+id/button_sin"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="Sin"
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                        <Button
+                            android:textSize="18.0sp"
+                            android:id="@+id/button_cos"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="Cos"
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                        <Button
+                            android:textSize="18.0sp"
+                            android:id="@+id/button_tan"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="Tan"
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                        <Button
+                            android:textSize="18.0sp"
+                            android:id="@+id/button_re"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="Re"
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                        <Button
+                            android:textSize="18.0sp"
+                            android:id="@+id/button_im"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="Im"
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0">
+                        <Button
+                            android:textSize="18.0sp"
+                            android:id="@+id/button_asin"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="Asin"
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                        <Button
+                            android:textSize="18.0sp"
+                            android:id="@+id/button_acos"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="Acos"
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                        <Button
+                            android:textSize="18.0sp"
+                            android:id="@+id/button_atan"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="Atan"
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                        <Button
+                            android:textSize="18.0sp"
+                            android:id="@+id/button_conj"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="Conj"
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                        <Button
+                            android:textSize="18.0sp"
+                            android:id="@+id/button_eq2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="="
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                    </TableRow>
+                </TableLayout>
+                <TableLayout
+                    android:id="@+id/keyboardPage3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0">
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0">
+                        <Button
+                            android:textSize="18.0sp"
+                            android:typeface="monospace"
+                            android:id="@+id/button_x"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="x"
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                        <Button
+                            android:textSize="18.0sp"
+                            android:typeface="monospace"
+                            android:id="@+id/button_comma"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text=","
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                        <Button
+                            android:textSize="15.0sp"
+                            android:typeface="monospace"
+                            android:id="@+id/button_eval"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="Eval"
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                        <Button
+                            android:textSize="15.0sp"
+                            android:typeface="monospace"
+                            android:id="@+id/button_fzero"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="Fzero"
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                        <Button
+                            android:textSize="18.0sp"
+                            android:typeface="monospace"
+                            android:id="@+id/button_bs3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="&lt;&lt;"
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0">
+                        <Button
+                            android:textSize="15.0sp"
+                            android:typeface="monospace"
+                            android:id="@+id/button_diff"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="Diff"
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                        <Button
+                            android:textSize="15.0sp"
+                            android:typeface="monospace"
+                            android:id="@+id/button_integ"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="Integ"
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                        <Button
+                            android:textSize="15.0sp"
+                            android:typeface="monospace"
+                            android:id="@+id/button_sum"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="Sum"
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                        <Button
+                            android:textSize="15.0sp"
+                            android:typeface="monospace"
+                            android:id="@+id/button_limit"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="Limit"
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                        <Button
+                            android:textSize="15.0sp"
+                            android:typeface="monospace"
+                            android:id="@+id/button_gamma"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="Gamma"
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0">
+                        <Button
+                            android:textSize="15.0sp"
+                            android:typeface="monospace"
+                            android:id="@+id/button_floor"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="Floor"
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                        <Button
+                            android:textSize="15.0sp"
+                            android:typeface="monospace"
+                            android:id="@+id/button_round"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="Round"
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                        <Button
+                            android:textSize="15.0sp"
+                            android:typeface="monospace"
+                            android:id="@+id/button_rand"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="Rand"
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                        <Button
+                            android:textSize="15.0sp"
+                            android:typeface="monospace"
+                            android:id="@+id/button_npr"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="nPr"
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                        <Button
+                            android:textSize="15.0sp"
+                            android:typeface="monospace"
+                            android:id="@+id/button_ncr"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="nCr"
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0">
+                        <Button
+                            android:textSize="15.0sp"
+                            android:typeface="monospace"
+                            android:id="@+id/button_color"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="Color"
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                        <Button
+                            android:textSize="15.0sp"
+                            android:typeface="monospace"
+                            android:id="@+id/button_prec"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="Prec"
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                        <Button
+                            android:textSize="15.0sp"
+                            android:typeface="monospace"
+                            android:id="@+id/button_base"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="Base"
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                        <Button
+                            android:textSize="15.0sp"
+                            android:typeface="monospace"
+                            android:id="@+id/button_reg"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="Reg"
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                        <Button
+                            android:textSize="18.0sp"
+                            android:typeface="monospace"
+                            android:id="@+id/button_eq3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="="
+                            android:layout_weight="1.0"
+                            android:textAllCaps="false"
+                            android:fontFamily="monospace"
+                            style="@style/Widget.AppCompat.Button.Borderless" />
+                    </TableRow>
+                </TableLayout>
+            </com.example.jfy.myapplication.KeyboardFlipper>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>
